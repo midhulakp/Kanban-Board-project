@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 const sectionSchema = new mongoose.Schema({
   title: {
     type: String,
