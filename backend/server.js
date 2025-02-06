@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 import { connectDB } from "./src/config/db.js";
 import sectionRoutes from "./src/routes/sections.js";
+import taskRoutes from "./src/routes/tasks.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -25,6 +26,7 @@ connectDB();
 
 // Routes
 app.use("/api/sections", sectionRoutes);
+app.use("/api/tasks", taskRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
